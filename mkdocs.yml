@@ -1,0 +1,61 @@
+site_name: Open Instruments
+theme:
+    name: 'material'
+    custom_dir: overrides
+    logo: 'images/kuttypy.png'
+    favicon: 'images/favicon.ico'
+ 
+#theme: 'readthedocs'
+markdown_extensions:
+    - toc:
+        permalink: True
+    - admonition
+    - smarty
+    - attr_list
+    - wikilinks
+    - codehilite:
+        linenums: False
+    - pymdownx.arithmatex
+    - pymdownx.betterem:
+        smart_enable: all
+    - pymdownx.caret
+    - pymdownx.critic
+    - pymdownx.details
+    - pymdownx.inlinehilite
+    - pymdownx.magiclink
+    - pymdownx.mark
+    - pymdownx.smartsymbols
+    - pymdownx.superfences:
+       preserve_tabs: true
+    - pymdownx.tasklist:
+        custom_checkbox: True
+    - pymdownx.tilde
+
+extra_css: ["assets/main.css"]
+site_favicon: 'images/favicon.ico'
+
+extra:
+  palette:
+      primary: '#087da1'
+      accent: '#00a889'
+  logo: 'images/kuttypy.png'
+  social:
+    - type: 'github'
+      link: 'https://github.com/csparkresearch/'
+    - type: 'twitter'
+      link: 'https://twitter.com/csparkresearch'
+
+
+repo_name: 'csparkresearch/kuttypy-gui'
+repo_url: 'https://github.com/csparkresearch/kuttypy-gui'
+copyright: 'Copyright © 2019 <a href="https://csparkresearch.in">CSpark Research</a>'
+
+google_analytics:
+  - 'UA-67472997-4'
+  - 'auto'
+
+nav:
+  - Home: 'index.md'
+  - Getting Started:
+      - 'Installation': 'installation.md'
+      - 'Software': 'software.md'
