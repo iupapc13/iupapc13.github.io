@@ -1,0 +1,64 @@
+site_name: Open Instruments
+theme:
+    name: 'material'
+    custom_dir: custom_theme/
+    favicon: 'images/favicon.ico'
+ 
+#theme: 'readthedocs'
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.attr_list
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  # - pymdownx.highlight:
+  #     linenums_style: pymdownx-inline
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra_css: ["assets/main.css"]
+site_favicon: 'images/favicon.ico'
+
+site_description: >-
+  Here, a case is made for the use of free open source hardware in research and education,
+  including countries and institutions where funds were never the biggest problem. Explore now
+
+repo_name: 'IUPAP C13'
+repo_url: 'https://github.com/iupapc13/'
+copyright: 'Copyright © 2020 <a href="">IUPAP</a>'
+
+plugins:
+  - search
+  - table-reader
+
+
+nav:
+  - Home: 'index.md'
+  - Resources: 'resources.md'
+  - Members: 'members.md'
