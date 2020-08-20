@@ -1,0 +1,57 @@
+
+title: "#include <All>"
+tagline: personal blog
+url: 'https://iupapc13.github.io'
+baseurl: '' #change it according to your repository name
+excerpt_separator: <!--more-->
+
+
+# Profile information
+yourname: Ajith Kumar B.P.
+location: New Delhi, India
+
+
+## Social Profiles
+#facebook: http://www.facebook.com  ## your facebook account url
+twitter: http://www.twitter.com  ## your twitter account url
+#linkedin: http://www.linkedin.com  ## your linkedin account url
+#dribbble: http://www.dribble.com  ## you dribbble account url
+#foursquare: http://www.foursquare.com  ## your foursquare account url
+
+permalink: none
+
+# List of links in the navigation bar
+navbar-links:
+  Resources:
+    - Open Access Journals: "journal/index.html"
+    - Scientific Equipment: "scientific/index.html"
+    - Laboratory Equipment: "laboratory/index.html"
+  
+# Image to show in the navigation bar - image must be a square (width = height)
+# Remove this parameter if you don't want an image in the navbar
+#avatar: "assets/images/avatar-icon.jpg"
+
+# If you want to have an image logo in the top-left corner instead of the title text,
+# then specify the following parameter
+title-img: "/assets/images/logo_transparent.png"
+
+collections: ['topic1','topic2']
+
+# sidebar post summary defaults
+defaults:
+  -
+    scope:
+      path: "_posts"
+    values:
+      sidebarposts: ["python"]
+
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+ syntax_highlighter: rouge
+ input: GFM
+
+plugins:
+  - jekyll-sitemap
+

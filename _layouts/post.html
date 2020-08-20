@@ -1,0 +1,140 @@
+---
+show-avatar: true
+common-css:
+  - "/semantic/dist/semantic.min.css"
+  - "/assets/css/product.css"
+  - "/assets/css/highlight.css"
+common-js:
+  - "/assets/js/jquery.min.js"
+  - "/semantic/dist/semantic.min.js"
+  - "/assets/js/mainsemantic.js"
+  - "/assets/js/toc.js"
+---
+
+<!DOCTYPE html>
+<html lang="en" {%if page.smooth-scroll%}style="scroll-behavior: smooth"{% endif %}>
+{% include head.html %}
+
+<body>
+
+
+<!-- Page Contents -->
+<div class="pusher">
+	
+  <div class="ui inverted vertical center aligned segment" style="background:url(/assets/images/cover.jpg) #f2bd91 fixed top center; " >
+
+    <div class="ui container">
+		{% include headersemantic.html %}
+    </div>
+
+    <div class="ui text container">
+      <h1 class="ui inverted header">
+        {{ page.title }}
+      </h1>
+      <h2>{{ page.description }}</h2>
+      <!--<div class="ui huge primary button">Get Started <i class="right arrow icon"></i></div> -->
+    </div>
+  </div>
+
+	{% if page.header %}<img src ="{{ page.header }}" class="ui fluid image"/>{% endif %}
+
+	{% if page.show-toc %}
+	<div class="ui internally celled stackable grid">
+		<div class="row">
+			<div class="ui column two wide mobile hidden" style="padding:30px;" id="toc-spacer">
+
+			</div>
+
+			<div class="ui column ten wide blog" style="padding:30px;" id="toc-leftbar">
+
+				{{ content }}
+				<div class="ui clearing divider"></div>
+
+			</div>
+			<div class="ui column four wide mobile hidden" id="toc-sidebar">
+				<div class="ui sticky toc container" id="toc">
+					<div class="ui hidden divider"></div>
+					{{ page.toctext }}
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="ui clearing divider"></div>	
+
+
+	{% else %}
+	<div class="ui container" >
+	{{ content }}
+	</div>
+	{% endif %}
+
+	<div class="ui grid">
+		<div class="row">
+			<div class = "ui column  wide">
+				<div class="ui container">
+					{% if page.previous.url %}
+						<a class="ui left floated button" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+					{% endif %}
+					{% if page.next.url %}
+						<a class="ui right floated button" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
+					{% endif %}
+				</div>
+
+				<div class="ui clearing divider"></div>	
+				<a class="ui small inverted red left labeled icon button" href="/expeyes17/blog"><i class="left arrow icon"></i>All Posts</a>			
+			</div>
+		</div>
+	</div>
+
+  <div class="ui inverted vertical footer segment">
+    <div class="ui container">
+      <div class="ui stackable inverted divided equal height stackable grid">
+        <div class="three wide column">
+          <h4 class="ui inverted header">Details</h4>
+          <div class="ui inverted link list">
+            <a href="about" class="item">About</a>
+            <a href="contact" class="item">Contact Us</a>
+          </div>
+        </div>
+        <div class="three wide column">
+          <h4 class="ui inverted header">Services</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">How To Access</a>
+          </div>
+        </div>
+        <div class="seven wide column">
+          <h4 class="ui inverted header">Company</h4>
+          <p>  CIN: U74900DL2015OPC287967</p>
+          <p>  Copyright © 2018  CSpark Research</p>
+        </div>
+        <div class="three wide column">
+          <h4 class="ui inverted header">Social</h4>
+          <div class="ui vertical buttons">
+			<a href="https://twitter.com/csparkresearch" target="_blank" class="ui twitter tiny button">
+			  <i class="twitter icon"></i>
+			  Twitter
+			</a>
+			<a href="https://www.instagram.com/phyglimmer/" target="_blank" class="ui instagram tiny button">
+			  <i class="instagram icon"></i>
+			  Instagram
+			</a>
+			<a href="#" class="ui facebook tiny  button">
+			  <i class="facebook icon"></i>
+			  Facebook
+			</a>
+		  </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  </div>
+
+{% include scripts.html %}
+</body>
+</html> 
+
+
